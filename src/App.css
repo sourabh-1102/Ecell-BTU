@@ -1,0 +1,25 @@
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+/* Dark theme base styles */
+body {
+    padding: 0 3rem;
+    background-color: #111827;
+    /* gray-900 */
+    color: #f9fafb;
+    /* gray-50 */
+}
+
+#logo {
+    padding-bottom: 5px;
+    filter: invert();
+}
+
+@media (max-width:500px) {
+    body {
+        padding: .5rem;
+    }
+}
