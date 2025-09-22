@@ -1,25 +1,60 @@
 * {
-    /* margin: 0; */
-    /* padding: 0; */
-    box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
 }
 
 /* Dark theme base styles */
 body {
-    padding: 0 3rem;
-    background-color: #111827;
-    /* gray-900 */
-    color: #f9fafb;
-    /* gray-50 */
+  /* overflow: hidden; */
+  padding: 0 3rem;
+  background-color: white;
+  /* gray-900 */
+  color: #f9fafb;
+  /* gray-50 */
 }
 
 #logo {
-    padding-bottom: 5px;
-    filter: invert();
+  padding-bottom: 5px;
+  filter: invert();
 }
 
-@media (max-width:500px) {
-    body {
-        padding: .5rem;
-    }
+@media (max-width: 500px) {
+  body {
+    padding: 0.5rem;
+  }
 }
+
+.slider {
+  position: absolute;
+  height: 100vh;
+  width: 500px;
+  background-color: white;
+  z-index: 10;
+  transition: 1s;
+}
+
+.team-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member[data-shadow-color] {
+  --shadow-color: var(--shadow-color, rgba(0, 0, 0, 0.2));
+}
+
+.team-member[data-shadow-color]:hover {
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.team-member[data-shadow-color="transparent"]:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Remove the below style when you have better than this or change it only by taking permission from the Founder */
+
+

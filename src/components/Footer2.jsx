@@ -1,156 +1,208 @@
 import React from "react";
+import logo from "../assets/5.png";
 
-const Footer2 = () => {
-    return (
-        <div className="bg-gray-900">
-            <footer className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                {/* Top Section */}
-                <div className="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
-                    {/* Logo + About */}
-                    <div className="col-span-full lg:col-span-2">
-                        <div className="mb-4 lg:-mt-2">
-                            <a
-                                href="/"
-                                className="inline-flex items-center gap-2 text-xl font-bold text-gray-100 md:text-2xl"
-                                aria-label="logo"
-                            >
-                                <svg
-                                    width="95"
-                                    height="94"
-                                    viewBox="0 0 95 94"
-                                    className="h-auto w-5 text-indigo-500"
-                                    fill="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path d="M96 0V47L48 94H0V47L48 0H96Z" />
-                                </svg>
-                                Flowrift
-                            </a>
-                        </div>
-                        <p className="mb-6 text-gray-400 sm:pr-8">
-                            Filler text is dummy text which has no meaning however looks very
-                            similar to real text.
-                        </p>
-
-                        {/* Socials */}
-                        <div className="flex gap-4">
-                            {[
-                                "M12 2.163c3.204...",
-                                "M24 4.557c-.883...",
-                                "M19 0h-14c-2.761...",
-                                "M12 0c-6.626 0-12...",
-                            ].map((d, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    target="_blank"
-                                    className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600"
-                                >
-                                    <svg
-                                        className="h-5 w-5"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path d={d} />
-                                    </svg>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Products */}
-                    <div>
-                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                            Products
-                        </div>
-                        <nav className="flex flex-col gap-4">
-                            {["Overview", "Solutions", "Pricing", "Customers"].map(
-                                (item, i) => (
-                                    <a
-                                        key={i}
-                                        href="#"
-                                        className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                                    >
-                                        {item}
-                                    </a>
-                                )
-                            )}
-                        </nav>
-                    </div>
-
-                    {/* Company */}
-                    <div>
-                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                            Company
-                        </div>
-                        <nav className="flex flex-col gap-4">
-                            {[
-                                "About",
-                                "Investor Relations",
-                                "Jobs",
-                                "Press",
-                                "Blog",
-                            ].map((item, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                                >
-                                    {item}
-                                </a>
-                            ))}
-                        </nav>
-                    </div>
-
-                    {/* Support */}
-                    <div>
-                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                            Support
-                        </div>
-                        <nav className="flex flex-col gap-4">
-                            {["Contact", "Documentation", "Chat", "FAQ"].map((item, i) => (
-                                <a
-                                    key={i}
-                                    href="#"
-                                    className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                                >
-                                    {item}
-                                </a>
-                            ))}
-                        </nav>
-                    </div>
-
-                    {/* Legal */}
-                    <div>
-                        <div className="mb-4 font-bold uppercase tracking-widest text-gray-100">
-                            Legal
-                        </div>
-                        <nav className="flex flex-col gap-4">
-                            {["Terms of Service", "Privacy Policy", "Cookie settings"].map(
-                                (item, i) => (
-                                    <a
-                                        key={i}
-                                        href="#"
-                                        className="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"
-                                    >
-                                        {item}
-                                    </a>
-                                )
-                            )}
-                        </nav>
-                    </div>
-                </div>
-
-                {/* Bottom */}
-                <div className="border-t border-gray-800 py-8 text-center text-sm text-gray-400">
-                    © 2021 - Present Flowrift. All rights reserved.
-                </div>
-            </footer>
-        </div>
-    );
+// SVG Icons for social media
+const socialIcons = {
+  instagram: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M12 2.163c3.204 0 3.584.012 4.851.07 1.171.055 1.838.214 2.378.411.64.237 1.173.612 1.706 1.145.533.533.908 1.066 1.145 1.706.197.54.356 1.207.411 2.378.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.851c-.055 1.171-.214 1.838-.411 2.378-.237.64-.612 1.173-1.145 1.706-.533.533-1.066.908-1.706 1.145-.54.197-1.207.356-2.378.411-1.267.058-1.647.07-4.851.07s-3.584-.012-4.851-.07c-1.171-.055-1.838-.214-2.378-.411-.64-.237-1.173-.612-1.706-1.145-.533-.533-.908-1.066-1.145-1.706-.197-.54-.356-1.207-.411-2.378-.058-1.267-.07-1.647-.07-4.851s.012-3.584.07-4.851c.055-1.171.214-1.838.411-2.378.237-.64.612-1.173 1.145-1.706.533-.533 1.066-.908 1.706-1.145.54-.197 1.207-.356 2.378-.411C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.324.015 7.042.072 5.76.128 4.793.303 3.868.663c-.927.36-1.717.868-2.433 1.584C.717 2.964.209 3.754.85 4.68.49 5.605.315 6.572.258 7.854.201 9.136.186 9.553.186 12s.015 2.864.072 4.146c.057 1.282.232 2.249.592 3.174.36.925.868 1.716 1.584 2.432.716.716 1.507 1.224 2.432 1.584.925.36 1.892.535 3.174.592 1.282.057 1.699.072 4.146.072s2.864-.015 4.146-.072c1.282-.057 2.249-.232 3.174-.592.925-.36 1.716-.868 2.432-1.584.716-.716 1.224-1.507 1.584-2.432.36-.925.535-1.892.592-3.174.057-1.282.072-1.699.072-4.146s-.015-2.864-.072-4.146c-.057-1.282-.232-2.249-.592-3.174-.36-.925-.868-1.716-1.584-2.432-.716-.716-1.507-1.224-2.432-1.584-.925-.36-1.892-.535-3.174-.592C15.136 0 14.719.015 12 .015zm0 5.484a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm0 10.745a4.245 4.245 0 110-8.49 4.245 4.245 0 010 8.49zm6.307-8.455a1.536 1.536 0 11-3.072 0 1.536 1.536 0 013.072 0z" />
+    </svg>
+  ),
+  linkedin: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-2-7c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm13 7h-2v-3.5c0-.92-.76-1.5-1.5-1.5-.735 0-1.5.58-1.5 1.5v3.5h-2v-6h2v1.2c.57-.866 1.48-1.2 2.76-1.2 2 0 3.24 1.25 3.24 3.79v3.21z" />
+    </svg>
+  ),
+  gmail: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M22 6.5V17c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2V6.5l10 7.5 10-7.5zM24 4c0-1.103-.897-2-2-2H2C.897 2 0 2.897 0 4v16c0 1.103.897 2 2 2h20c1.103 0 2-.897 2-2V4zM2 4h20l-10 7.5L2 4z" />
+    </svg>
+  ),
+  twitter: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M18.91 1.05h3.084l-6.195 7.152L24 22.95H20.72L14.77 15.685l-4.524 7.265H7.114L13.12 11.05 4.5 1.05H8.54l4.28 5.624L18.91 1.05zm-.84 20.37h1.49l-11.855-15.932H6.28l11.79 15.932z" />
+    </svg>
+  ),
+  facebook: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path d="M2.978 12h17.844c.654 0 1.282.259 1.745.722.463.463.722 1.091.722 1.745s-.259 1.282-.722 1.745c-.463.463-1.091.722-1.745.722H11.045V22c0 1.105-.895 2-2 2s-2-.895-2-2v-5.787H2.978c-1.657 0-3-1.343-3-3s1.343-3 3-3zm18.889-12c-2.327 0-4.57 1.077-6.059 2.912-.138.167-.323.279-.533.32-.211.04-.429.02-.63.02H9.045c-.417 0-.817.117-1.16.326-.343.209-.623.498-.827.842-.204.344-.308.736-.308 1.132v1.745h5.533c1.105 0 2-.895 2-2s-.895-2-2-2h-5.533V.044h-.001c-.139 0-.279.025-.417.075-.138.051-.27.124-.393.218-.124.095-.238.204-.34.33-.102.126-.192.268-.268.421-.077.153-.14.316-.188.483-.048.168-.073.34-.073.513v1.864c0 1.105.895 2 2 2s2-.895 2-2v-.411h11.233c.417 0 .817.117 1.16.326.343.209.623.498.827.842.204.344.308.736.308 1.132v2.855c0 .654.259 1.282.722 1.745.463.463 1.091.722 1.745.722s1.282-.259 1.745-.722c.463-.463.722-1.091.722-1.745V1.044c0-.654-.259-1.282-.722-1.745-.463-.463-1.091-.722-1.745-.722z" />
+    </svg>
+  ),
 };
 
-export default Footer2;
+const Footer = () => {
+  return (
+    <footer className="w-full bg-[#243137] text-white py-10 rounded-t-4xl">
+      <div className="flex flex-col md:flex-row items-center justify-between px-6 mx-auto max-w-screen-xl">
+        {/* Left Section: Logo and Name */}
+        <div className="flex flex-col md:flex-row items-center mb-6 md:mb-0">
+          <img
+            src={logo}
+            alt="E-Cell Logo"
+            className="h-30 w-30 inline-block "
+          />
+          <div className="ml-4 md:ml-6 text-center md:text-left">
+            <h1 className="text-xl font-bold leading-none">
+              <span className="block text-white mt-1">ENTREPRENEURSHIP</span>
+              <span className="block text-white mt-2">CELL</span>
+            </h1>
+            <p className="text-sm mt-1 text-white">
+              Bikaner Technical University
+            </p>
+          </div>
+        </div>
+
+        {/* Vertical Divider */}
+        <div className="hidden md:block w-px bg-gray-400 h-30"></div>
+
+        {/* Right Section: Contact Info and Social Links */}
+        <div className="flex flex-col w-full md:w-auto mt-6 md:mt-0 md:ml-20">
+          {/* Contact Information */}
+          <div className="flex flex-col space-y-4 text-gray-300 w-full md:w-auto">
+            {/* Address */}
+            <div className="flex items-center justify-center md:justify-start space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <span>
+                RIICO Karni Industrial Area, Pugal Road, Bikaner -334004
+              </span>
+            </div>
+            {/* Phone */}
+            <div className="flex items-center justify-center md:justify-start space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.342l-2.582 1.353a1 1 0 00-.466 1.151l1.353 2.582a1 1 0 001.151.466l1.353-2.582a1 1 0 011.342-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <span>0151 2250940, 50</span>
+            </div>
+            {/* Email */}
+            <div className="flex items-center justify-center md:justify-start space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <span>ecell.btu@gmail.com</span>
+            </div>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex gap-4 mt-8 justify-center md:justify-start">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" hover:shadow-md  hover:scale-110 rounded-xl transition-colors duration-200"
+            >
+              {socialIcons.instagram}
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:shadow-md  hover:scale-110 rounded-xl transition-colors duration-200"
+            >
+              {socialIcons.linkedin}
+            </a>
+            <a
+              href="mailto:ecell.btu@gmail.com"
+              className="hover:shadow-md hover:scale-110 rounded-md transition-colors duration-200"
+            >
+              {socialIcons.gmail}
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" hover:shadow-md hover:scale-110 rounded-xl transition-colors duration-200"
+            >
+              {socialIcons.twitter}
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" hover:shadow-md  rounded-xl hover:scale-106 transition-colors duration-200"
+            >
+              {socialIcons.facebook}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Copyright Section */}
+      <div className="flex justify-center items-center mt-10 text-gray-400 text-sm">
+        <p>&copy; {new Date().getFullYear()} E-Cell. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

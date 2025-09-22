@@ -1,0 +1,2 @@
+heading - 55px -color text/card-[#243137]
+content - 19px - color text black

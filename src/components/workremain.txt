@@ -1,0 +1,6 @@
+work remaining in this site:
+        routing of blog section and taking data from the backend.
+          ''     "     gallery section page and it's image.
+
+
+ 
