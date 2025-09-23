@@ -31,7 +31,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20">
+    <section className="bg-white py-12 justify-items-start sm:py-16 lg:py-20">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         {/* Heading */}
         <div className="mb-12 md:mb-16 text-center">

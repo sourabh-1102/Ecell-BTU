@@ -100,7 +100,7 @@ export const Team = () => {
 
   return (
     <>
-      <div className="bg-gray-100 py-6 sm:py-8 lg:py-12" id="team">
+      <div className="bg-white py-6 sm:py-8 lg:py-12" id="team">
         <div className="mx-auto max-w-screen-xl px-4 md:px-8">
           <div className="mb-10 md:mb-16 text-center">
             <h2 className=" px-4 py-2 rounded-2xl mb-4 text-center text-[55px] font-bold text-[#243137] md:mb-6 lg:text-3xl">
