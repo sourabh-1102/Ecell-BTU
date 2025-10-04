@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../assets/5.png";
-
+import instagramLogo from "../assets/instalogo.png";
+import gmaillogo from "../assets/maillogo.png";
+import linkedinlogo from "../assets/linkedinlogo.png";
 // SVG Icons for social media
 const socialIcons = {
   instagram: (
@@ -13,6 +15,12 @@ const socialIcons = {
     >
       <path d="M12 2.163c3.204 0 3.584.012 4.851.07 1.171.055 1.838.214 2.378.411.64.237 1.173.612 1.706 1.145.533.533.908 1.066 1.145 1.706.197.54.356 1.207.411 2.378.058 1.267.07 1.647.07 4.851s-.012 3.584-.07 4.851c-.055 1.171-.214 1.838-.411 2.378-.237.64-.612 1.173-1.145 1.706-.533.533-1.066.908-1.706 1.145-.54.197-1.207.356-2.378.411-1.267.058-1.647.07-4.851.07s-3.584-.012-4.851-.07c-1.171-.055-1.838-.214-2.378-.411-.64-.237-1.173-.612-1.706-1.145-.533-.533-.908-1.066-1.145-1.706-.197-.54-.356-1.207-.411-2.378-.058-1.267-.07-1.647-.07-4.851s.012-3.584.07-4.851c.055-1.171.214-1.838.411-2.378.237-.64.612-1.173 1.145-1.706.533-.533 1.066-.908 1.706-1.145.54-.197 1.207-.356 2.378-.411C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.324.015 7.042.072 5.76.128 4.793.303 3.868.663c-.927.36-1.717.868-2.433 1.584C.717 2.964.209 3.754.85 4.68.49 5.605.315 6.572.258 7.854.201 9.136.186 9.553.186 12s.015 2.864.072 4.146c.057 1.282.232 2.249.592 3.174.36.925.868 1.716 1.584 2.432.716.716 1.507 1.224 2.432 1.584.925.36 1.892.535 3.174.592 1.282.057 1.699.072 4.146.072s2.864-.015 4.146-.072c1.282-.057 2.249-.232 3.174-.592.925-.36 1.716-.868 2.432-1.584.716-.716 1.224-1.507 1.584-2.432.36-.925.535-1.892.592-3.174.057-1.282.072-1.699.072-4.146s-.015-2.864-.072-4.146c-.057-1.282-.232-2.249-.592-3.174-.36-.925-.868-1.716-1.584-2.432-.716-.716-1.507-1.224-2.432-1.584-.925-.36-1.892-.535-3.174-.592C15.136 0 14.719.015 12 .015zm0 5.484a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm0 10.745a4.245 4.245 0 110-8.49 4.245 4.245 0 010 8.49zm6.307-8.455a1.536 1.536 0 11-3.072 0 1.536 1.536 0 013.072 0z" />
     </svg>
+
+    //  <img
+    //         src={instagramLogo} // Use the imported image here
+    //         alt="Instagram Logo"
+    //         className="h-15 w-15 inline-block" // Customize size as needed
+    //       />
   ),
   linkedin: (
     <svg
@@ -24,6 +32,11 @@ const socialIcons = {
     >
       <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-2-7c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm13 7h-2v-3.5c0-.92-.76-1.5-1.5-1.5-.735 0-1.5.58-1.5 1.5v3.5h-2v-6h2v1.2c.57-.866 1.48-1.2 2.76-1.2 2 0 3.24 1.25 3.24 3.79v3.21z" />
     </svg>
+    //  <img
+    //         src={linkedinlogo} // Use the imported image here
+    //         alt="Instagram Logo"
+    //         className="h-15 w-15 inline-block" // Customize size as needed
+    //       />
   ),
   gmail: (
     <svg
@@ -35,28 +48,11 @@ const socialIcons = {
     >
       <path d="M22 6.5V17c0 1.103-.897 2-2 2H4c-1.103 0-2-.897-2-2V6.5l10 7.5 10-7.5zM24 4c0-1.103-.897-2-2-2H2C.897 2 0 2.897 0 4v16c0 1.103.897 2 2 2h20c1.103 0 2-.897 2-2V4zM2 4h20l-10 7.5L2 4z" />
     </svg>
-  ),
-  twitter: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M18.91 1.05h3.084l-6.195 7.152L24 22.95H20.72L14.77 15.685l-4.524 7.265H7.114L13.12 11.05 4.5 1.05H8.54l4.28 5.624L18.91 1.05zm-.84 20.37h1.49l-11.855-15.932H6.28l11.79 15.932z" />
-    </svg>
-  ),
-  facebook: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-    >
-      <path d="M2.978 12h17.844c.654 0 1.282.259 1.745.722.463.463.722 1.091.722 1.745s-.259 1.282-.722 1.745c-.463.463-1.091.722-1.745.722H11.045V22c0 1.105-.895 2-2 2s-2-.895-2-2v-5.787H2.978c-1.657 0-3-1.343-3-3s1.343-3 3-3zm18.889-12c-2.327 0-4.57 1.077-6.059 2.912-.138.167-.323.279-.533.32-.211.04-.429.02-.63.02H9.045c-.417 0-.817.117-1.16.326-.343.209-.623.498-.827.842-.204.344-.308.736-.308 1.132v1.745h5.533c1.105 0 2-.895 2-2s-.895-2-2-2h-5.533V.044h-.001c-.139 0-.279.025-.417.075-.138.051-.27.124-.393.218-.124.095-.238.204-.34.33-.102.126-.192.268-.268.421-.077.153-.14.316-.188.483-.048.168-.073.34-.073.513v1.864c0 1.105.895 2 2 2s2-.895 2-2v-.411h11.233c.417 0 .817.117 1.16.326.343.209.623.498.827.842.204.344.308.736.308 1.132v2.855c0 .654.259 1.282.722 1.745.463.463 1.091.722 1.745.722s1.282-.259 1.745-.722c.463-.463.722-1.091.722-1.745V1.044c0-.654-.259-1.282-.722-1.745-.463-.463-1.091-.722-1.745-.722z" />
-    </svg>
+    //  <img
+    //         src={gmaillogo} // Use the imported image here
+    //         alt="Gmail Logo"
+    //         className="h-15 w-15 inline-block" // Customize size as needed
+    //       />
   ),
 };
 
@@ -154,12 +150,12 @@ const Footer = () => {
           </div>
 
           {/* Social Media Links */}
-          <div className="flex gap-4 mt-8 justify-center md:justify-start">
+          <div className="flex gap-4 mt-2 justify-center md:justify-start">
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className=" hover:shadow-md  hover:scale-110 rounded-xl transition-colors duration-200"
+              className="  hover:shadow-amber-200 hover:shadow-2xl rounded-2xl  hover:scale-105  transition-colors duration-200"
             >
               {socialIcons.instagram}
             </a>
@@ -167,32 +163,17 @@ const Footer = () => {
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:shadow-md  hover:scale-110 rounded-xl transition-colors duration-200"
+              className=" hover:shadow-amber-200 hover:shadow-2xl rounded-2xl hover:scale-105  transition-colors duration-200"
             >
               {socialIcons.linkedin}
             </a>
             <a
               href="mailto:ecell.btu@gmail.com"
-              className="hover:shadow-md hover:scale-110 rounded-md transition-colors duration-200"
+              className=" hover:shadow-amber-200 hover:shadow-2xl rounded-2xl hover:scale-105  transition-colors duration-200"
             >
               {socialIcons.gmail}
             </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" hover:shadow-md hover:scale-110 rounded-xl transition-colors duration-200"
-            >
-              {socialIcons.twitter}
-            </a>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" hover:shadow-md  rounded-xl hover:scale-106 transition-colors duration-200"
-            >
-              {socialIcons.facebook}
-            </a>
+            
           </div>
         </div>
       </div>

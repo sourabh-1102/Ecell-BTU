@@ -50,7 +50,7 @@ const Features = () => {
               key={index}
               className="flex flex-col rounded-2xl border-3 border-transparent bg-[#243137] p-6 hover:border-indigo-300 hover:shadow-lg transition-all duration-300"
             >
-              <h3 className="mb-2 text-lg font-semibold text-white md:text-xl">
+              <h3 className="mb-2 text-lg font-bold  text-white md:text-xl">
                 {feature.title}
               </h3>
               <p className="mb-4 text-gray-300">{feature.desc}</p>

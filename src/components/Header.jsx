@@ -84,12 +84,27 @@ export const Header = () => {
           {isMoreOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-[#243137] rounded-md shadow-lg z-50">
               <Link
-                to="/moments"
+               to="/moregallery"
                 className={dropdownLink}
                 onClick={() => setIsMoreOpen(false)}
               >
                 Moments
               </Link>
+               <Link
+                to="/reg"
+                
+                className={dropdownLink}
+                onClick={() => setIsMoreOpen(false)}
+              >
+                Register
+              </Link>
+               <a
+                href="/contact"
+                className={dropdownLink}
+                onClick={() => setIsMoreOpen(false)}
+              >
+                Contact
+              </a>
               <Link
                 to="/faq"
                 className={dropdownLink}
@@ -97,13 +112,8 @@ export const Header = () => {
               >
                 FAQ
               </Link>
-              <a
-                href="/contact"
-                className={dropdownLink}
-                onClick={() => setIsMoreOpen(false)}
-              >
-                Contact
-              </a>
+             
+              
             </div>
           )}
         </div>
@@ -117,7 +127,7 @@ export const Header = () => {
       >
         {isMenuOpen ? (
           // Cross Icon
-          <img src="/teamImages/cross.svg" alt="menu" className="h-6 w-6 " />
+          <img src="/teamImages/xmark-regular-full.svg" alt="menu" className="h-6 w-6 " />
         ) : (
           // Hamburger Icon
           <img src="/teamImages/menu.png" alt="menu" className="h-6 w-6 " />
@@ -126,7 +136,7 @@ export const Header = () => {
 
       {/* Mobile Overlay Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-0 left-0 w-full h-screen bg-black/80 rounded-4xl mt-[18%]  flex flex-col items-center justify-center space-y-8 z-40">
+        <div className="lg:hidden absolute top-0 left-0 w-full h-[50vh] bg-black/80 rounded-4xl mt-0 flex flex-col items-center justify-start space-y-4 z-40 overflow-y-auto">
           <Link
             to="/"
             className={mobileLink}
@@ -142,25 +152,18 @@ export const Header = () => {
             About
           </Link>
           <Link
-            to="/blog"
-            className={mobileLink}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Blog
-          </Link>
-          <Link
-            to="/team"
-            className={mobileLink}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Team
-          </Link>
-          <Link
             to="/gallery"
             className={mobileLink}
             onClick={() => setIsMenuOpen(false)}
           >
             Gallery
+          </Link>
+           <Link
+            to="/moregallery"
+            className={mobileLink}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Moments
           </Link>
           <Link
             to="/features"
@@ -169,19 +172,19 @@ export const Header = () => {
           >
             Events
           </Link>
-          <Link
-            to="/faq"
+          <a
+            href="/reg"
             className={mobileLink}
             onClick={() => setIsMenuOpen(false)}
           >
-            FAQ
-          </Link>
+            Register
+          </a>
           <Link
-            to="/moments"
+            to="/blog"
             className={mobileLink}
             onClick={() => setIsMenuOpen(false)}
           >
-            Moments
+            Blog
           </Link>
           <a
             href="/contact"
@@ -190,6 +193,13 @@ export const Header = () => {
           >
             Contact
           </a>
+          <Link
+            to="/faq"
+            className={mobileLink}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            FAQ
+          </Link>
         </div>
       )}
     </header>

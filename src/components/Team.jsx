@@ -91,10 +91,15 @@ export const Team = () => {
       },
     },
     {
-      img: "/teamImages/vijender.jpg",
-      name: "Vijendra Singh",
-      role: "PR Head",
+      img: "/teamImages/varsha.jpg",
+      name: "Varsha Bishnoi",
+      role: "PR Head & Event Management",
       shadowColor: "black",
+       socials: {
+        Gmail:
+          "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=varshabishnoi2729@gmail.com ",
+        linkedin: "https://www.linkedin.com/in/varsha-bishnoi-23167732a",
+      },
     },
   ];
 
