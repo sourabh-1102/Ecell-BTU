@@ -49,7 +49,7 @@ Events & Gallery
 
 This project is owned and maintained by **SOURABH SINGH JAT** and **E-cell BTU**. All rights are reserved.
 
-© 2025 **SOURABH SINGH JAT** and **E-cell BTU**. All Rights Reserved.
+© 2025 **E-cell BTU**. All Rights Reserved.
 
 
 
