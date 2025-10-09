@@ -34,9 +34,7 @@ Events & Gallery
 
 <img width="681" height="738" alt="image" src="https://github.com/user-attachments/assets/1fcacd0d-f34c-40e3-a227-cd67f23226b0" />
 
-Team
 
-<img width="569" height="452" alt="image" src="https://github.com/user-attachments/assets/0db1aa64-c258-41ff-bfac-351025d19316" />
 
 ## For more CLone this repo
 
